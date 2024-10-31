@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+
+<table align="center" border="1" cellpadding="10" style="color: blue;">
+      <tr>
+        <td>
+       
+         <h2 style="color:orange;">User Registration Details</h2>
+       <form th:action="@{registerUser}" th:object="${user}" method="post">
+        <label for="name"><b>Name</b></label> <br>
+         <input type="text" placeholder="Enter name" id="name" name="name" required><br>
+        <label for="username"><b>Username</b></label><br>
+         <input type="text" placeholder="Enter Username" id="username" name="username" required><br>
+        <label for="email"><b>Email</b></label><br>
+         <input type="email" placeholder="Enter email" id="email" name="email" required><br>
+        <label for="phone"><b>Phone</b></label><br>
+         <input type="text" placeholder="Enter Number" id="phone" name="phone" required><br>
+        <label for="password"><b>Password</b></label><br>
+         <input type="password" placeholder="Enter Password" id="password" name="password" required><br>
+        <label for="confirm password"><b>Confirm Password</b></label><br>
+         <input type="password" placeholder="Enter confirm password" id="confirm password" name="cpassword" required><br>
+      
+      <label>Gender</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      
+      <input type="radio" id="female" name="gender" value="male">
+      <label for="female">Female</label><br>
+      
+         <input type="submit">
+  
+     </form>
+     </td>
+     </tr>
+  </table>
+  </body>
+</html>
